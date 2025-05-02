@@ -1,4 +1,4 @@
-# nuxsaas-installation-manual
+# install_nuxsaas
 
 Install via .sh script
 1. Buy and download the latest version from [https://alvinkiveu.com/script/nuxsaas-for-phpnuxbill](https://alvinkiveu.com/script/nuxsaas-for-phpnuxbill) and unzip the files.
