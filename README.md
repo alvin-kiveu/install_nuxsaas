@@ -1,50 +1,83 @@
 # install_nuxsaas
 
-Install via .sh script
-1. Buy and download the latest version from [https://alvinkiveu.com/script/nuxsaas-for-phpnuxbill](https://alvinkiveu.com/script/nuxsaas-for-phpnuxbill) and unzip the files.
-2. Upload the zip file to your server using SFTP or SSH to the directory `/var/www/html/`
 
-3. get the install_nuxsaas.sh script from the repository and upload it to your server using SFTP or SSH to the directory `/var/www/html/`
-   - [Download install_nuxsaas.sh](https://raw.githubusercontent.com/alvin-kiveu/nuxsaas-installation-manual/main/install_nuxsaas.sh)
-    - [Download nuxsaas.zip](https://raw.githubusercontent.com/alvin-kiveu/nuxsaas-installation-manual/main/nuxsaas.zip)
-    - You can also use the following command to download the script directly to your server:
+1. Download the latest NuxSaas version
+---------------------------------------
+Visit the official link and buy/download the latest NuxSaas build:
+
+https://alvinkiveu.com/script/nuxsaas-for-phpnuxbill
+
+2. Upload Files to Your Server
+------------------------------
+Use SFTP or SSH to upload the downloaded ZIP file to your server:
+Target directory: /var/www/html/
+
+Alternatively, download the zip directly via wget:
 ```bash
 cd /var/www/html/
-sudo wget https://raw.githubusercontent.com/alvin-kiveu/nuxsaas-installation-manual/main/install_nuxsaas.sh
+sudo wget https://raw.githubusercontent.com/alvin-kiveu/install_nuxsaas/main/nuxsaas.zip
 ```
-   - Or use the following command to download the zip file directly to your server:
+
+3. Download and Prepare the Installer Script
+--------------------------------------------
+
+Download the installer script from the official GitHub repo:
+
+Option 1: Manual Upload via SFTP/SSH  
+
+Upload `install_nuxsaas.sh` to `/var/www/html/`
+
+Option 2: Download with wget:
+
+install wget if not already installed:
+
+```bash
+sudo apt install wget
+```
+
+Then download the script directly to your server:
+
 ```bash
 cd /var/www/html/
+sudo wget https://raw.githubusercontent.com/alvin-kiveu/install_nuxsaas/main/install_nuxsaas.sh
+```
 
-4. Change the permission of the script to make it executable:
-
-
-
+Make the script executable:
 ```bash
-cd /var/www/html/
 sudo chmod +x install_nuxsaas.sh
 ```
-5. Run the script:
 
+4. Run the Installer
+--------------------
+Execute the script:
 ```bash
 sudo ./install_nuxsaas.sh
 ```
-6. Follow the prompts to complete the installation.
 
-7. After the installation is complete, you will be prompted to remove the script. Type `y` and press enter to remove the script.
+Follow the on-screen prompts to:
 
+- Choose between Apache or Nginx
+- Set your domain name
+- Complete installation and Apache/Nginx setup
 
-8. Open your browser and visit the domain you added.
+5. Cleanup
+----------
 
-9. Fill in the installation form and click Install
+After installation, you will be prompted to delete the script.
+Type 'y' and press Enter when asked to remove `install_nuxsaas.sh`.
 
-10. If successful, you’ll see “Installation Successful”
+6. Finalize via Browser
+-----------------------
+Open your browser and go to the domain you added.
 
-11. If not, fix the displayed errors and try again
+Complete the web installer form and click "Install".
 
-12. **Default login credentials:**
+7. Done!
+--------
+If successful: You'll see “Installation Successful”
+If not: Fix any displayed errors and try again.
 
-```bash
-username: admin
-password: admin
-```
+Default Login Credentials:
+--------------------------
+    Username: admin
+    Password: admin
