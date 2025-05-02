@@ -174,4 +174,13 @@ EOL
   sudo systemctl reload nginx || { echo -e "${RED}Failed to reload NGINX.${NC}"; exit 1; }
 fi
 
-echo -e "${GREEN}✔️ Installation complete. Visit http://$DOMAIN to continue setup in browser.${NC}"
+echo -e "${GREEN}✔️ Installation complete. Visit http://$DOMAIN to continue setup in browser
+Login with the following credentials:
+Username: admin
+Password: admin
+Please change the password after first login.${NC}"
+echo -e "${YELLOW}Note: Make sure to set up SSL for your domain. You can use Let's Encrypt for free SSL certificates.${NC}"
+echo -e "${BLUE}For further assistance, Call/Whatsapp: +254 113 015 674
+Email: alvo967@gmail.com
+Website: https://www.alvinkiveu.com
+${NC}"
